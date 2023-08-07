@@ -7,11 +7,22 @@
   flex-wrap: wrap;  
   width: 750px;
   height: 750px;
+
+  border: 1px solid black;
+  box-sizing: border-box;
 }
 
 .container > .content {
   padding: 0;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0, 5%);
   margin: 0;
   box-sizing: border-box;
+}
+
+.container > .mouseover {
+  background-color: rgb(255, 0, 0, 100%);
+}
+
+.container > .mouseout {
+  background-color: rgb(255, 0, 0, 50%);
 }

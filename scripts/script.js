@@ -1,6 +1,4 @@
 function createGrid(gridSize) {
-  const container = document.querySelector(".container");
-
   if(gridSize > 100) {
     alert("ERROR: The max number of squares per side of the new grid is 100.");
     return;
@@ -17,9 +15,22 @@ function createGrid(gridSize) {
 }
 
 const createNewGrid = document.querySelector("#create-new-grid");
+const container = document.querySelector(".container");
+
+createGrid(16);
 
 createNewGrid.addEventListener("click", () => {
   createGrid(Number(prompt("Enter the number of squares per side of the new grid (max of 100):")));
 });
 
-createGrid(16);
+container.addEventListener("mouseover", (e) => {
+  if(e.target.classList.contains("content")) {
+    e.target.classList.add("mouseover");
+  }
+});
+
+container.addEventListener("mouseout", (e) => {
+  if(e.target.classList.contains("content")) {
+    e.target.classList.add("mouseout");
+  }
+});
