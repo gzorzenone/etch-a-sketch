@@ -1,3 +1,7 @@
+#create-new-grid {
+  margin-bottom: 8px;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;  
